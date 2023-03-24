@@ -239,6 +239,30 @@
                 <a href="#H1110163">
                   Options
                 </a>
+                <ol>
+                  <li>
+                    <a href="#H3196296">
+                      Docker
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H6921635">
+                          Docker Compose
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H7509008">
+                      Manual install
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H4316453">
+                      Visual Code Studio
+                    </a>
+                  </li>
+                </ol>
               </li>
               <li>
                 <a href="#H3654239">
@@ -256,16 +280,21 @@
           </li>
           <li>
             <a href="#_11_0">
-              Rendering
+              Editing in Quarto: With Visual Studio Code
             </a>
           </li>
           <li>
             <a href="#_12_0">
-              Making SPARQL Query in Wikidata of a Collection
+              Rendering
             </a>
           </li>
           <li>
             <a href="#_13_0">
+              Making SPARQL Query in Wikidata of a Collection
+            </a>
+          </li>
+          <li>
+            <a href="#_14_0">
               Transfering a Wikidata SPARQL query to a Juypter Notebook
             </a>
           </li>
@@ -768,30 +797,51 @@
     <div class="article-part article-title" id="_10_0">Quarto Install</div>
     <div class="article-part article-richtext article-body">
       <h2 id="H1110163">Options</h2>
-      <ol id="L20132801">
-        <li>
-          <p>Docker</p>
-        </li>
-        <li>
-          <p>Manual install</p>
-        </li>
-      </ol>
+      <h3 id="H3196296">Docker</h3>
+      <h4 id="H6921635">Docker Compose</h4>
+      <p>Source: <a href="https://github.com/NFDI4Culture/cp4c" title="https://github.com/NFDI4Culture/cp4c">Readme</a> - Thanks to Simon Bowie</p>
+      <hr>
+      <p><a href="https://github.com/NFDI4Culture/cp4c" title="https://github.com/NFDI4Culture/cp4c">https://github.com/NFDI4Culture/cp4c</a></p>
+      <p>This repository also contains Docker Compose and Dockerfiles for running the various applications in Docker containers.</p>
+      <p>Run docker-compose up -d --build to start the containers and docker-compose down to stop the containers.</p>
+      <p>The jupyterlab container runs a stand-alone version of JupyterLab on <a href="http://localhost:8888/">http://localhost:8888</a>. This can be used to edit any Jupyter Notebook files in the repository. The JupyterLab instance runs with the password 'jupyterlab'.</p>
+      <p>The nginx container runs Nginx webserver and displays the static site that Quarto renders. This runs at <a href="http://localhost:1337/">http://localhost:1337</a>.</p>
+      <p>The quarto container starts a Ubuntu 22.04 container, installs various things like Python, downloads Quarto and installs it, and then adds Python modules like jupyter, matplotlib, and panda. It then runs in the background so Quarto can be called on to render the qmd and ipynb files into the site/book like so:</p>
+      <p>docker exec -it quarto quarto render</p>
+      <p>There's a known issue with Quarto running in the Docker container in macOS due to the amd64 emulation of Docker Desktop for arm64 MacOS. See discussion at <a href="https://github.com/quarto-dev/quarto-cli/discussions/3308">quarto-dev/quarto-cli#3308</a>. This shouldn't occur in any other environment running Docker.</p>
+      <h3 id="H7509008">Manual install</h3>
+      <p><a href="https://quarto.org/docs/get-started/">https://quarto.org/docs/get-started/</a></p>
+      <p>They miss out that you need Python installed and Jupyter Lab and a working terminal to install them</p>
+      <p><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
+      <p><a href="https://jupyter.org/install">https://jupyter.org/install</a></p>
+      <p>Also install Panda: py -m pip install panda</p>
+      <p>As well as knowing what the Python prompt and escape looks like: <a href="https://stackoverflow.com/questions/41524734/how-to-exit-python-script-in-command-prompt">https://stackoverflow.com/questions/41524734/how-to-exit-python-script-in-command-prompt</a></p>
+      <h3 id="H4316453">Visual Code Studio</h3>
+      <p>This is not covered at present as there are conflicts with other approaches.</p>
       <h2 id="H3654239">Troubleshooting</h2>
+      <p></p>
       <h3 id="H8213267">Quarto commands</h3>
+      <p>quarto render</p>
+      <p>quarto preview</p>
       <p>quarto check</p>
     </div>
     <section class="fnlist" role="doc-footnotes"></section>
-    <div class="article-part article-title" id="_11_0">Rendering</div>
+    <div class="article-part article-title" id="_11_0">Editing in Quarto: With Visual Studio Code</div>
+    <div class="article-part article-richtext article-body">
+      <p></p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_12_0">Rendering</div>
     <div class="article-part article-richtext article-body">
       <p>Using quarto to render as multi-format.</p>
     </div>
     <section class="fnlist" role="doc-footnotes"></section>
-    <div class="article-part article-title" id="_12_0">Making SPARQL Query in Wikidata of a Collection</div>
+    <div class="article-part article-title" id="_13_0">Making SPARQL Query in Wikidata of a Collection</div>
     <div class="article-part article-richtext article-body">
       <p>Collections, Wikidata, and SPARQL.</p>
     </div>
     <section class="fnlist" role="doc-footnotes"></section>
-    <div class="article-part article-title" id="_13_0">Transfering a Wikidata SPARQL query to a Juypter Notebook</div>
+    <div class="article-part article-title" id="_14_0">Transfering a Wikidata SPARQL query to a Juypter Notebook</div>
     <div class="article-part article-richtext article-body">
       <p></p>
     </div>
