@@ -99,7 +99,7 @@
     </div>
     <div class="copyrightpage frontmatter">
       <p>Published by: Open Science Lab</p>
-      <p>Last updated: 2023-04-03</p>
+      <p>Last updated: 2023-04-06</p>
       <p>Created: 2023-03-16</p>
       <p>Language: English (United States)</p>
       <p>Created by: Editorial Team</p>
@@ -328,7 +328,7 @@
           </li>
           <li>
             <a href="#_13_0">
-              Editing in Quarto: With Visual Studio Code
+              Editing Quarto
             </a>
             <ol>
               <li>
@@ -369,8 +369,15 @@
               </li>
               <li>
                 <a href="#H3164141">
-                  Query 2: Make your own collection query
+                  Query 2: Your custom collection query
                 </a>
+                <ol>
+                  <li>
+                    <a href="#H7994039">
+                      Steps
+                    </a>
+                  </li>
+                </ol>
               </li>
             </ol>
           </li>
@@ -857,16 +864,42 @@
           <p>Forking a repository</p>
         </li>
         <li>
-          <p>Cloning a repository</p>
+          <p>Cloning a repository - use GitHub Desktop, Visual Studio Code, or any other tool to copy the repository to your local machine</p>
         </li>
         <li>
-          <p>Turning on Github Pages</p>
+          <p><strong>IMPORTANT!:</strong> Turning on Github Pages.</p>
+          <ul id="L57786631">
+            <li>
+              <p>First go to the Settings tab in your repository; second in the left menu go down to Pages; third, secect main, docs - and save. In a few minutes this will torn on your Github Pages website. Congrats!</p>
+            </li>
+            <li>
+              <figure id="F29949071" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/0745897f-933f-4fa1-b083-8bcd8cd90747.png">
+                <figcaption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Figure</span><span class="text">Turn on GitHub Pages</span></figcaption>
+              </figure>
+            </li>
+          </ul>
+          <ul id="L70523991">
+            <li>
+              <p>The last steup is to add the GitHub Pages URL to the front end information panel of your repository.</p>
+              <ul id="L39411">
+                <li>
+                  <p>Navigate back ton the Code view of your repo. Top your you can add your GitHub Pages URL to the About information of your repository. Open the About area by clicking on the cog icon. The in the dialog window click the use Pages address, and save.</p>
+                </li>
+                <li>
+                  <figure id="F28582001" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/fb0de97a-30bb-44d3-8848-6b38648d55b8.png">
+                    <figcaption><span class="label-counter" data-book-counter="2" data-chapter-counter="2">Figure</span><span class="text">Add Pages URL to repo frontend</span></figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </li>
         <li>
-          <p>Enabling a local editor: Visual Code Editor</p>
+          <p>Enabling a local editor: Visual Studio Code</p>
         </li>
         <li>
           <p>Attribution and citation</p>
+          <p></p>
         </li>
       </ul>
       <p></p>
@@ -1029,23 +1062,21 @@
       </ul>
     </div>
     <section class="fnlist" role="doc-footnotes"></section>
-    <div class="article-part article-title" id="_13_0">Editing in Quarto: With Visual Studio Code</div>
+    <div class="article-part article-title" id="_13_0">Editing Quarto </div>
     <div class="article-part article-richtext article-body">
       <p>Visual Studio Code is one option as an editor, but you can use any editor suite that you like.</p>
       <h2 id="H4307972">Install Visual Studio Code (VSC)</h2>
       <p><a href="https://code.visualstudio.com/" title="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
       <h3 id="H5672542">Editing</h3>
-      <ul id="L40077741">
-        <li>
-          <p>Edit and save from VSC.</p>
-        </li>
-        <li>
-          <p>Don't run Quarto or upload to GitHub from VSC for this demo publication.</p>
-        </li>
-        <li>
-          <p>Editing Jupyter Notebooks in VSC. This is optional.</p>
-        </li>
-      </ul>
+      <p>Load the whole repository folder into your editor.</p>
+      <p>The key file to edit in Quart is <strong>_quarto.yml. </strong>This file contains the main configurations for your publication.</p>
+      <p>If you are working on a fork the first thing you need to do is edit the repository address on line 19 - this will point the GitHub icon in your publication to your own GitHub repo.</p>
+      <blockquote>
+        <p>repo-url: https://github.com/NFDI4Culture/catalogue-003 </p>
+      </blockquote>
+      <p>To add new sections to your publication jast add file names to the chapter list after line 12</p>
+      <p>The other settings can we read about on the Quarto support pages, for example <a href="https://quarto.org/docs/books/book-structure.html#references" title="https://quarto.org/docs/books/book-structure.html#references">Book Structure</a>. </p>
+      <p>If you are using VSC you can run Notebooks as well as use the Terminal to run Quarto commands, and commit to GitHub.</p>
     </div>
     <section class="fnlist" role="doc-footnotes"></section>
     <div class="article-part article-title" id="_14_0">Jupyter Notebooks: Setup, Editing, and Saving</div>
@@ -1065,14 +1096,20 @@
     <section class="fnlist" role="doc-footnotes"></section>
     <div class="article-part article-title" id="_15_0">Transfering a Wikidata SPARQL query to a Juypter Notebook</div>
     <div class="article-part article-richtext article-body">
-      <p>Query 1: A paiting collection - can already be rendered in the Notebook and by Quarto.</p>
-      <p>Query 2: Yourn own collection query - you will need assistance in the class to render this as the outputted SPARQL metadata results needs to be processed by some Python code and this quickly becomes complicated.</p>
+      <ul id="L11365601">
+        <li>
+          <p>Query 1: A paiting collection - can already be rendered in the Notebook and by Quarto.</p>
+        </li>
+        <li>
+          <p>Query 2: Yourn own collection query - you will need assistance in the class to render this as the outputted SPARQL metadata results needs to be processed by some Python code and this quickly becomes complicated.</p>
+        </li>
+      </ul>
       <h3 id="H9669908">Query 1: A painting collection</h3>
       <p>For this collection you simply edit the existing Notebook for the painting collection <strong>'paintings.ipynb'</strong> - transfering across the new values that you have already created. See the section 'Making SPARQL Queries in Wikidata of Collections'.</p>
       <figure id="F71506081" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/f1dc39b3-91a2-4377-bc97-1ba6e2f15706.png">
-        <figcaption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Figure</span><span class="text">Where to add your Wikidata SPARQL URL link and paste in the full query.</span></figcaption>
+        <figcaption><span class="label-counter" data-book-counter="3" data-chapter-counter="1">Figure</span><span class="text">Where to add your Wikidata SPARQL URL link and paste in the full query.</span></figcaption>
       </figure>
-      <p>These will be: <strong>Collection, Date, and Number of items. </strong></p>
+      <p>These are the values being changed: <strong>Collection, Date, and Number of items. </strong></p>
       <ol id="L56445551">
         <li>
           <p>All you need to do is paste in two items into the main cell of the Notebook:</p>
@@ -1081,16 +1118,44 @@
               <p>The SPARQL URL - see the green text indicated in Figure 1</p>
             </li>
             <li>
-              <p>Paste in the complete body of the SPARQL query - see the orange text in Figure one.</p>
+              <p>Paste in the complete body of the SPARQL query - see the orange text in Figure 1. Note all of your query is pasted between the four apostrohies top and bottom:</p>
+              <p>''''</p>
+              <p>your query</p>
+              <p>'''''</p>
             </li>
           </ol>
         </li>
       </ol>
       <p>Then run the Notebook and save the Notebook file when you are done.</p>
-      <p>To render the output in Quarto, run the Quarto commands - preview and/or render.</p>
+      <p>To render the output in Quarto, run the Quarto commands in your terminal - 'quarto preview' and/or 'quarto render'.</p>
       <p>When your finished you can upload the results to your GitHub repository.</p>
-      <h3 id="H3164141">Query 2: Make your own collection query</h3>
-      <p>TBC</p>
+      <h3 id="H3164141">Query 2: Your custom collection query</h3>
+      <p>Because SPARQL queries are varied and complex the process of moving the query into a Jupyter Notebook is not simple and involved knowledge of SPARQL and Python. The challenge is that the SPARQL metadata output has to be parsed by Python for presentation in the publication and to do this custom code needs to be written.</p>
+      <p>To help with this obstacle a support service is in place to consult and add the Python code to your Notebooks.</p>
+      <p>When you have completed the steps below and have a Notebook ready raise a ticket in the GitHub Project and assign to support and we will review the Notebook.</p>
+      <h4 id="H7994039">Steps</h4>
+      <p>This will prepare the Notebook to output the SPARQL results only. The additional rendering will need to be added by support.</p>
+      <p>Create a new Notebook in your Quarto publication 'collection-name.ipynb'.</p>
+      <p>Back in the custom collection query at the bottom right there is a &lt;code&gt; button - click on the button and it will launch a preview window. Top right click on the Python tab, this will present the Query as Python code. Now copy and paste the code into your Notebook.</p>
+      <p>Next, we want to copy the URL of your query to then also past this into your notebook. This will allow users to review your orginal query. The URL is found on the bottom right of the query page, as copy short link. If this does not work just copy the long address from your browser address bar.</p>
+      <p>Paste your query link into the Notebook as a comment, which means haveing a # at the start of the line. Like so, underneath the lines shown here:</p>
+      <blockquote>
+        <p>import sys</p>
+        <p>from SPARQLWrapper import SPARQLWrapper, JSON</p>
+        <p># query link - https://w.wiki/6YJi based on https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Paintings_by_Gustav_Klimt</p>
+      </blockquote>
+      <p>To finish your Notebook editing insert a Markdown field above your code cell as add a desciption, e.g., </p>
+      <blockquote>
+        <p>Custom Collection by Simon Worthington (April 23): Paintings by Lucas Cranach the Elder <a href="https://www.wikidata.org/wiki/Q191748" title="https://www.wikidata.org/wiki/Q191748">https://www.wikidata.org/wiki/Q191748</a>.</p>
+        <p>The collection Notebook only contains the SPARQL query and needs additional Python adding to parse the metadata output.</p>
+      </blockquote>
+      <p>Save and run your Notebook. The result will be the SPARQL unformatted output. </p>
+      <p>Add your Notebook to the Quarto TOC by adding the file name of your collection to the TOC in the file <strong>_quarto.yml</strong>, under the chapter header on line 12. Save and render the quart publication to see the results.</p>
+      <p>To complete this part raise a ticket in the GitHub project assigning to support. </p>
+      <p>This concludes this part of the process.</p>
+      <p></p>
+      <p></p>
+      <p></p>
       <p></p>
       <p></p>
     </div>
