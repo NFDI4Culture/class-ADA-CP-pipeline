@@ -99,10 +99,10 @@
     </div>
     <div class="copyrightpage frontmatter">
       <p>Published by: Open Science Lab</p>
-      <p>Last updated: 2023-03-24</p>
+      <p>Last updated: 2023-04-03</p>
       <p>Created: 2023-03-16</p>
       <p>Language: English (United States)</p>
-      <p>Created by: Simon Worthington</p>
+      <p>Created by: Editorial Team</p>
     </div>
     <div class="tocpage frontmatter">
       <nav role="doc-toc">
@@ -241,8 +241,13 @@
                 </a>
                 <ol>
                   <li>
+                    <a href="#H7509008">
+                      Manual install
+                    </a>
+                  </li>
+                  <li>
                     <a href="#H3196296">
-                      Docker
+                      Docker install
                     </a>
                     <ol>
                       <li>
@@ -253,13 +258,8 @@
                     </ol>
                   </li>
                   <li>
-                    <a href="#H7509008">
-                      Manual install
-                    </a>
-                  </li>
-                  <li>
                     <a href="#H4316453">
-                      Visual Code Studio
+                      Visual Code Studio - Quarto install
                     </a>
                   </li>
                 </ol>
@@ -280,6 +280,54 @@
           </li>
           <li>
             <a href="#_11_0">
+              Activity: Making SPARQL Queries in Wikidata of Collections
+            </a>
+            <ol>
+              <li>
+                <a href="#H5313897">
+                  The activity goal
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H9669908">
+                      Query 1: A painting collection
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H3164141">
+                      Query 2: Make your own collection query
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H286828">
+                          Resources for finding collections: Data models and information
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H4465979">
+                      Steps for making your own query
+                    </a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_12_0">
+              Quarto Rendering
+            </a>
+            <ol>
+              <li>
+                <a href="#H6152061">
+                  Steps
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_13_0">
               Editing in Quarto: With Visual Studio Code
             </a>
             <ol>
@@ -298,35 +346,30 @@
             </ol>
           </li>
           <li>
-            <a href="#_12_0">
-              Rendering
-            </a>
-          </li>
-          <li>
-            <a href="#_13_0">
-              Activity: Making SPARQL Query in Wikidata of a Collection
+            <a href="#_14_0">
+              Jupyter Notebooks: Setup, Editing, and Saving
             </a>
             <ol>
               <li>
-                <a href="#H7866945">
-                  What needs to be in the query
-                </a>
-              </li>
-              <li>
-                <a href="#H1711417">
-                  Steps in the process
+                <a href="#H4680997">
+                  Steps
                 </a>
               </li>
             </ol>
           </li>
           <li>
-            <a href="#_14_0">
+            <a href="#_15_0">
               Transfering a Wikidata SPARQL query to a Juypter Notebook
             </a>
             <ol>
               <li>
-                <a href="#H4651342">
-                  Example
+                <a href="#H9669908">
+                  Query 1: A painting collection
+                </a>
+              </li>
+              <li>
+                <a href="#H3164141">
+                  Query 2: Make your own collection query
                 </a>
               </li>
             </ol>
@@ -656,6 +699,8 @@
       <ol id="L21588281" start="3">
         <li>
           <p><em><strong>Step-by-step instructions</strong></em> to replicate parts of this <a href="https://query.wikidata.org/#%23defaultView%3AImageGrid%0ASELECT%20%3Fitem%20%3FitemLabel%20%3Finceptionyear%20%3Fcreator%20%3FcreatorLabel%20%3Fcopyright%20%3FcopyrightLabel%20%3Fimage%0AWHERE%0A%7B%0A%20%20%23%20find%20items%20which%3A%0A%20%20%23%20are%20instances%20of%20%28wdt%3AP31%29%20paintings%20%28wd%3AQ3305213%29%0A%20%20%23%20have%20the%20property%20%28wdt%3AP195%29%20of%20being%20in%20collection%20wd%3AQ812285%20%28Bavarian%20State%20Painting%20Collections%20https%3A%2F%2Fwww.wikidata.org%2Fwiki%2FWikidata%3AWikiProject_sum_of_all_paintings%2FCollection%2FBavarian_State_Painting_Collections%29%0A%20%20%3Fitem%20wdt%3AP31%20wd%3AQ3305213%20.%0A%20%20%3Fitem%20wdt%3AP195%20wd%3AQ812285%20.%0A%20%20%23%20get%20the%20item%27s%20creator%20property%20%28wdt%3AP170%29%0A%20%20%3Fitem%20wdt%3AP170%20%3Fcreator%20.%0A%20%20%23%20get%20the%20item%27s%20image%20property%20%28wdt%3AP18%29%0A%20%20%3Fitem%20wdt%3AP18%20%3Fimage%20.%0A%20%20%23%20get%20the%20item%27s%20copyright%20status%20%28wdt%3AP6216%29%0A%20%20%3Fitem%20wdt%3AP6216%20%3Fcopyright%20.%20%0A%20%20%20%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP571%20%3Finception.%0A%20%20%20%20BIND%28YEAR%28%3Finception%29%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20UNION%0A%20%20%7B%0A%20%20%20%20MINUS%20%7B%20%3Fitem%20wdt%3AP571%20_%3Ab30.%20%7D%0A%20%20%20%20%3Fitem%20wdt%3AP170%20%3Fcreator.%0A%20%20%20%20%3Fcreator%20wdt%3AP569%20%3Fdob%3B%0A%20%20%20%20%20%20wdt%3AP570%20%3Fdod.%0A%20%20%20%20BIND%28%28%28%28YEAR%28%3Fdod%29%29%20-%20%28YEAR%28%3Fdob%29%29%29%20%2F%202%20%29%20%2B%20%28YEAR%28%3Fdob%29%29%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20UNION%0A%20%20%7B%0A%20%20%20%20MINUS%20%7B%20%3Fitem%20wdt%3AP571%20_%3Ab31.%20%7D%0A%20%20%20%20%3Fitem%20wdt%3AP170%20%3Fcreator.%0A%20%20%20%20MINUS%20%7B%20%3Fcreator%20wdt%3AP570%20_%3Ab32.%20%7D%0A%20%20%20%20%3Fcreator%20wdt%3AP569%20%3Fdob.%0A%20%20%20%20BIND%28%28YEAR%28%3Fdob%29%29%20%2B%2050%20%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20%23%20filter%20out%20all%20paintings%20not%20created%20between%20the%20years%201600%20and%201700%0A%20%20FILTER%28%281600%20%20%3C%3D%20%3Finceptionyear%29%20%26%26%20%28%3Finceptionyear%20%3C%201700%20%29%29%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%22.%20%7D%20%7D%0A%23%20limit%20to%20nine%20results%0ALIMIT%209" title="https://query.wikidata.org/#%23defaultView%3AImageGrid%0ASELECT%20%3Fitem%20%3FitemLabel%20%3Finceptionyear%20%3Fcreator%20%3FcreatorLabel%20%3Fcopyright%20%3FcopyrightLabel%20%3Fimage%0AWHERE%0A%7B%0A%20%20%23%20find%20items%20which%3A%0A%20%20%23%20are%20instances%20of%20%28wdt%3AP31%29%20paintings%20%28wd%3AQ3305213%29%0A%20%20%23%20have%20the%20property%20%28wdt%3AP195%29%20of%20being%20in%20collection%20wd%3AQ812285%20%28Bavarian%20State%20Painting%20Collections%20https%3A%2F%2Fwww.wikidata.org%2Fwiki%2FWikidata%3AWikiProject_sum_of_all_paintings%2FCollection%2FBavarian_State_Painting_Collections%29%0A%20%20%3Fitem%20wdt%3AP31%20wd%3AQ3305213%20.%0A%20%20%3Fitem%20wdt%3AP195%20wd%3AQ812285%20.%0A%20%20%23%20get%20the%20item%27s%20creator%20property%20%28wdt%3AP170%29%0A%20%20%3Fitem%20wdt%3AP170%20%3Fcreator%20.%0A%20%20%23%20get%20the%20item%27s%20image%20property%20%28wdt%3AP18%29%0A%20%20%3Fitem%20wdt%3AP18%20%3Fimage%20.%0A%20%20%23%20get%20the%20item%27s%20copyright%20status%20%28wdt%3AP6216%29%0A%20%20%3Fitem%20wdt%3AP6216%20%3Fcopyright%20.%20%0A%20%20%20%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP571%20%3Finception.%0A%20%20%20%20BIND%28YEAR%28%3Finception%29%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20UNION%0A%20%20%7B%0A%20%20%20%20MINUS%20%7B%20%3Fitem%20wdt%3AP571%20_%3Ab30.%20%7D%0A%20%20%20%20%3Fitem%20wdt%3AP170%20%3Fcreator.%0A%20%20%20%20%3Fcreator%20wdt%3AP569%20%3Fdob%3B%0A%20%20%20%20%20%20wdt%3AP570%20%3Fdod.%0A%20%20%20%20BIND%28%28%28%28YEAR%28%3Fdod%29%29%20-%20%28YEAR%28%3Fdob%29%29%29%20%2F%202%20%29%20%2B%20%28YEAR%28%3Fdob%29%29%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20UNION%0A%20%20%7B%0A%20%20%20%20MINUS%20%7B%20%3Fitem%20wdt%3AP571%20_%3Ab31.%20%7D%0A%20%20%20%20%3Fitem%20wdt%3AP170%20%3Fcreator.%0A%20%20%20%20MINUS%20%7B%20%3Fcreator%20wdt%3AP570%20_%3Ab32.%20%7D%0A%20%20%20%20%3Fcreator%20wdt%3AP569%20%3Fdob.%0A%20%20%20%20BIND%28%28YEAR%28%3Fdob%29%29%20%2B%2050%20%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20%23%20filter%20out%20all%20paintings%20not%20created%20between%20the%20years%201600%20and%201700%0A%20%20FILTER%28%281600%20%20%3C%3D%20%3Finceptionyear%29%20%26%26%20%28%3Finceptionyear%20%3C%201700%20%29%29%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%22.%20%7D%20%7D%0A%23%20limit%20to%20nine%20results%0ALIMIT%209">query link</a> base on this collection <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_sum_of_all_paintings/Collection/Bavarian_State_Painting_Collections/17th_Century" title="https://www.wikidata.org/wiki/Wikidata:WikiProject_sum_of_all_paintings/Collection/Bavarian_State_Painting_Collections/17th_Century">17C Bavarian painting</a>:</p>
+          <p><strong>Note: You will use the lefthand 'Query helper' GUI, where you can type in names of items. Sometimes you need to enter a term twice to get the correct item to appear.</strong></p>
+          <p>Items names are in bold below with their corresponding identifiers.</p>
           <ol id="L87126511">
             <li>
               <p>Go to <a href="https://query.wikidata.org/" title="https://query.wikidata.org/">https://query.wikidata.org/</a> </p>
@@ -831,7 +876,26 @@
     <div class="article-part article-richtext article-body">
       <p>Quarto help docs: <a href="https://quarto.org/" title="https://quarto.org/">https://quarto.org/</a></p>
       <h2 id="H1110163">Options</h2>
-      <h3 id="H3196296">Docker</h3>
+      <p>For general purposes use the manual install. The Docker install is for when you are running multiple environments on your computer or carrying out long term development.</p>
+      <ul id="L69344681">
+        <li>
+          <p>Manual install</p>
+        </li>
+        <li>
+          <p>Docker install</p>
+        </li>
+        <li>
+          <p>Visual Code Studio install (not covered here)</p>
+        </li>
+      </ul>
+      <h3 id="H7509008">Manual install</h3>
+      <p><a href="https://quarto.org/docs/get-started/">https://quarto.org/docs/get-started/</a></p>
+      <p>Note: They miss out that you need Python installed and Jupyter Lab and a working terminal to install them</p>
+      <p><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
+      <p><a href="https://jupyter.org/install">https://jupyter.org/install</a></p>
+      <p>Also install Panda: py -m pip install panda</p>
+      <p>As well as knowing what the Python prompt and escape looks like: <a href="https://stackoverflow.com/questions/41524734/how-to-exit-python-script-in-command-prompt">https://stackoverflow.com/questions/41524734/how-to-exit-python-script-in-command-prompt</a></p>
+      <h3 id="H3196296">Docker install</h3>
       <h4 id="H6921635">Docker Compose</h4>
       <p>Text source: <a href="https://github.com/NFDI4Culture/cp4c" title="https://github.com/NFDI4Culture/cp4c">Readme</a> - Thanks to Simon Bowie</p>
       <hr>
@@ -843,24 +907,129 @@
       <p>The quarto container starts a Ubuntu 22.04 container, installs various things like Python, downloads Quarto and installs it, and then adds Python modules like jupyter, matplotlib, and panda. It then runs in the background so Quarto can be called on to render the qmd and ipynb files into the site/book like so:</p>
       <p>docker exec -it quarto quarto render</p>
       <p>There's a known issue with Quarto running in the Docker container in macOS due to the amd64 emulation of Docker Desktop for arm64 MacOS. See discussion at <a href="https://github.com/quarto-dev/quarto-cli/discussions/3308">quarto-dev/quarto-cli#3308</a>. This shouldn't occur in any other environment running Docker.</p>
-      <h3 id="H7509008">Manual install</h3>
-      <p><a href="https://quarto.org/docs/get-started/">https://quarto.org/docs/get-started/</a></p>
-      <p>They miss out that you need Python installed and Jupyter Lab and a working terminal to install them</p>
-      <p><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
-      <p><a href="https://jupyter.org/install">https://jupyter.org/install</a></p>
-      <p>Also install Panda: py -m pip install panda</p>
-      <p>As well as knowing what the Python prompt and escape looks like: <a href="https://stackoverflow.com/questions/41524734/how-to-exit-python-script-in-command-prompt">https://stackoverflow.com/questions/41524734/how-to-exit-python-script-in-command-prompt</a></p>
-      <h3 id="H4316453">Visual Code Studio</h3>
+      <h3 id="H4316453">Visual Code Studio - Quarto install</h3>
       <p>This is not covered at present as there are conflicts with other approaches.</p>
       <h2 id="H3654239">Troubleshooting</h2>
-      <p></p>
+      <p>Raise an issue in the GitHub project if you need support.</p>
       <h3 id="H8213267">Quarto commands</h3>
       <p>quarto render</p>
       <p>quarto preview</p>
       <p>quarto check</p>
     </div>
     <section class="fnlist" role="doc-footnotes"></section>
-    <div class="article-part article-title" id="_11_0">Editing in Quarto: With Visual Studio Code</div>
+    <div class="article-part article-title" id="_11_0">Activity: Making SPARQL Queries in Wikidata of Collections</div>
+    <div class="article-part article-richtext article-body">
+      <p>Keywords: Collections, Wikidata, SPARQL</p>
+      <p>If you are not familiar with creating a Wikidata SPARQL query then see the section on how to create a query: <strong><a href="https://nfdi4culture.github.io/class-ADA-CP-pipeline/#_7_0" title="https://nfdi4culture.github.io/class-ADA-CP-pipeline/#_7_0">Activity: Create a Wikidata query</a></strong></p>
+      <h2 id="H5313897">The activity goal</h2>
+      <p><strong>Create a sample SPARQL query of a cultural collection of a museum and save a link to the query on your Wikiversity user page.</strong></p>
+      <p>Note: <em><strong>Two collections are needed</strong></em> as the painting collection is easier to add to Jupyter Notebooks as you edit existing data. The second general collection is used to explore more options - assistence will be needed to help move the second query to the Jupyter Notebooks as they can be complex.</p>
+      <ol id="L66168051">
+        <li>
+          <p><strong>First one of a painting collection, and then,</strong></p>
+        </li>
+        <li>
+          <p><strong>A second one - of any type of media or artifact from a collection: books, sculpture, photography, etc.</strong></p>
+        </li>
+      </ol>
+      <p>Here is an example: <a href="https://github.com/orgs/NFDI4Culture/projects/2/views/1?pane=issue&amp;itemId=23832721" title="https://github.com/orgs/NFDI4Culture/projects/2/views/1?pane=issue&amp;itemId=23832721">Bavarian Collections, 1590 - 1750</a> SW March 2023</p>
+      <p>If you need support the GitHub Project (task tracker) for the class is <a href="https://github.com/orgs/NFDI4Culture/projects/2" title="https://github.com/orgs/NFDI4Culture/projects/2">here</a> - titled: <em>Prototype catalogue - ADA CP pipeline</em>.</p>
+      <p>Later in the workflow the query will be added to a Jupyter Notebook for rendering in Quarto.</p>
+      <p><strong>Create the two queries and add the query links to Wikiversity.</strong></p>
+      <h3 id="H9669908">Query 1: A painting collection</h3>
+      <p>The Painting Notebook is simpler to move to Jupyter Notebooks as the number of edits needed are fewer.</p>
+      <ol id="L68245451">
+        <li>
+          <p>Use and copy the existing painting collection and modify the setting <a href="https://github.com/orgs/NFDI4Culture/projects/2/views/1?pane=issue&amp;itemId=23832721" title="https://github.com/orgs/NFDI4Culture/projects/2/views/1?pane=issue&amp;itemId=23832721">Bavarian Collections, 1590 - 1750</a>.</p>
+        </li>
+        <li>
+          <p>The exercise is to change three parts: the painting collection, date perameters, and number of items.</p>
+          <ol id="L56445551">
+            <li>
+              <p><strong>Collection:</strong> Line 9 - <em>?item wdt:P195 wd:Q812285</em>: Add in the identifier of a different collection - see list here Here is a sample list of painting collections found on Wikidata, <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_sum_of_all_paintings/Collection" title="https://www.wikidata.org/wiki/Wikidata:WikiProject_sum_of_all_paintings/Collection">Wikidata:WikiProject sum of all paintings/Collection</a>. As an example here the the Frick Museum - <a href="https://www.wikidata.org/wiki/Q682827" title="https://www.wikidata.org/wiki/Q682827">https://www.wikidata.org/wiki/Q682827</a> has a unique identifier of unique Q682827. </p>
+            </li>
+            <li>
+              <p><strong>Date:</strong> Line 37 - <em>FILTER((1590 &lt;= ?inceptionyear) &amp;&amp; (?inceptionyear &lt; 1750 ))</em>: here change the from and to dates. </p>
+            </li>
+            <li>
+              <p><strong>Number of items:</strong> Line 40 - <em>LIMIT 9</em>: Change the number of items and run preview.</p>
+            </li>
+          </ol>
+          <p>Now copy the query URL and save the link to your Wikiversiyt page. To copy the link you need to have previewed the query and bottom right is a short link copy button (if this doesnt work - copy the URL from your browsers address bar). Later we will add the new query to the Notebook painting.ipny.</p>
+        </li>
+      </ol>
+      <h3 id="H3164141">Query 2: Make your own collection query</h3>
+      <p>Note: We want to have images in our query, using the image grid view allows you to preview images.</p>
+      <h4 id="H286828">Resources for finding collections: Data models and information</h4>
+      <p>The links will help you find collections and see what types of artwork or media are listed on Wikidata.</p>
+      <table id="T56964801" class="table-100 table-center table-fixed" data-width="100" data-aligned="center" data-layout="fixed" data-category="none">
+        <tbody>
+          <tr>
+            <td>
+              <p><a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Museums" title="https://www.wikidata.org/wiki/Wikidata:WikiProject_Museums">Museums</a></p>
+            </td>
+            <td>
+              <p><a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Movies" title="https://www.wikidata.org/wiki/Wikidata:WikiProject_Movies">Film</a></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_sum_of_all_paintings" title="https://www.wikidata.org/wiki/Wikidata:WikiProject_sum_of_all_paintings">WikiProject sum of all paintings</a></p>
+            </td>
+            <td>
+              <p><a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Visual_arts/Item_structure/Art_genres" title="https://www.wikidata.org/wiki/Wikidata:WikiProject_Visual_arts/Item_structure/Art_genres">Art genres</a></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books" title="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books">Books</a></p>
+            </td>
+            <td>
+              <p><a href="https://www.wikidata.org/wiki/Category:GLAM_WikiProjects" title="https://www.wikidata.org/wiki/Category:GLAM_WikiProjects">GLAM WikiProjects</a></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="H4465979">Steps for making your own query</h3>
+      <ol id="L22725961">
+        <li>
+          <p>Start with a blank query <a href="https://query.wikidata.org/" title="https://query.wikidata.org/">https://query.wikidata.org/</a></p>
+        </li>
+        <li>
+          <p>Use the <strong>Examples</strong> button top left and then edit the example, or use DuckduckGo or Google to search for queries to edit.</p>
+        </li>
+        <li>
+          <p>Save your query link on your Wikiversity user homepage.</p>
+          <hr>
+        </li>
+      </ol>
+      <p>In the next section <em><strong>'Transfering a Wikidata SPARQL query to a Juypter Notebook'</strong></em> you will see how to move your queries to Jupyter Notebooks.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_12_0">Quarto Rendering</div>
+    <div class="article-part article-richtext article-body">
+      <p>Quarto help docs: <a href="https://quarto.org/" title="https://quarto.org/">https://quarto.org/</a></p>
+      <p>Using quarto to render as multi-format.</p>
+      <p>Use the command line to run Quarto: Powershell, GitBash, Cygwin, OSX shell, or terminal in Visual Studio Code ('VSC), etc.</p>
+      <p>Execute the Quarto commands from the top level of your publication repository.</p>
+      <h2 id="H6152061">Steps</h2>
+      <ul id="L19814261">
+        <li>
+          <p>Run and save Jupyter Notebooks, install the requirements.txt file before running Notebooks.</p>
+        </li>
+        <li>
+          <p>Work locally with <strong>quarto preview</strong> - this will launch a browser window to preview your publication.</p>
+        </li>
+        <li>
+          <p>Render: Use command <strong>quarto render. </strong></p>
+        </li>
+        <li>
+          <p>Upload to GitHub when ready using commit and push - Use GitHub Desktop, or from V'SC, etc.</p>
+        </li>
+      </ul>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_13_0">Editing in Quarto: With Visual Studio Code</div>
     <div class="article-part article-richtext article-body">
       <p>Visual Studio Code is one option as an editor, but you can use any editor suite that you like.</p>
       <h2 id="H4307972">Install Visual Studio Code (VSC)</h2>
@@ -879,79 +1048,50 @@
       </ul>
     </div>
     <section class="fnlist" role="doc-footnotes"></section>
-    <div class="article-part article-title" id="_12_0">Rendering</div>
+    <div class="article-part article-title" id="_14_0">Jupyter Notebooks: Setup, Editing, and Saving</div>
     <div class="article-part article-richtext article-body">
-      <p>Quarto help docs: <a href="https://quarto.org/" title="https://quarto.org/">https://quarto.org/</a></p>
-      <p>Using quarto to render as multi-format.</p>
-      <p>Use the command line to run Quarto: Powershell, GitBash, Cygwin, OSX shell, etc.</p>
-      <ul id="L19814261">
-        <li>
-          <p>Run and save Jupyter Notebooks</p>
-        </li>
-        <li>
-          <p>Work locally with <strong>quarto preview</strong></p>
-        </li>
-        <li>
-          <p>Render: Use command <strong>quarto render</strong></p>
-        </li>
-        <li>
-          <p>Upload to GitHub when ready - Use GitHub Desktop.</p>
-        </li>
-      </ul>
+      <p>General instructions for using Jupyter Notebooks.</p>
+      <p>Installation of Python and Jupyter Notebooks is covered in Quarto install section.</p>
+      <p>The default editor we use is Visual Code Studio, but you can use other Notebook editors.</p>
+      <h2 id="H4680997">Steps</h2>
+      <p>First run: <strong>requirements.txt</strong> file for Python libraries. See: <a href="https://note.nkmk.me/en/python-pip-install-requirements/" title="https://note.nkmk.me/en/python-pip-install-requirements/">https://note.nkmk.me/en/python-pip-install-requirements/</a></p>
+      <p>Use:</p>
+      <blockquote>
+        <p># install with 'pip install -r requirements.txt'</p>
+      </blockquote>
+      <p>Then you can run, edit, and save Notebooks.</p>
+      <p></p>
     </div>
     <section class="fnlist" role="doc-footnotes"></section>
-    <div class="article-part article-title" id="_13_0">Activity: Making SPARQL Query in Wikidata of a Collection</div>
+    <div class="article-part article-title" id="_15_0">Transfering a Wikidata SPARQL query to a Juypter Notebook</div>
     <div class="article-part article-richtext article-body">
-      <p>Collections, Wikidata, and SPARQL.</p>
-      <p>See section on how to create a querie: <strong><a href="https://nfdi4culture.github.io/class-ADA-CP-pipeline/#_7_0" title="https://nfdi4culture.github.io/class-ADA-CP-pipeline/#_7_0">Activity: Create a Wikidata query</a></strong></p>
-      <p><strong>The exercise: Create a sample SPARQL query of a cultural collection of a museum and save a link to the query with publication in its related Github project.</strong></p>
-      <p>Here is an example: <a href="https://github.com/orgs/NFDI4Culture/projects/2/views/1?pane=issue&amp;itemId=23832721" title="https://github.com/orgs/NFDI4Culture/projects/2/views/1?pane=issue&amp;itemId=23832721">Bavarian Collections, 1590 - 1750</a> SW March 2023</p>
-      <p>The Project for the class is <a href="https://github.com/orgs/NFDI4Culture/projects/2" title="https://github.com/orgs/NFDI4Culture/projects/2">here</a> - titled: <em>Prototype catalogue - ADA CP pipeline</em>.</p>
-      <p>Later in the workflow the query will be added to a Jupyter Notebook for rendering in Quarto.</p>
-      <h2 id="H7866945">What needs to be in the query</h2>
-      <ol id="L68245451">
+      <p>Query 1: A paiting collection - can already be rendered in the Notebook and by Quarto.</p>
+      <p>Query 2: Yourn own collection query - you will need assistance in the class to render this as the outputted SPARQL metadata results needs to be processed by some Python code and this quickly becomes complicated.</p>
+      <h3 id="H9669908">Query 1: A painting collection</h3>
+      <p>For this collection you simply edit the existing Notebook for the painting collection <strong>'paintings.ipynb'</strong> - transfering across the new values that you have already created. See the section 'Making SPARQL Queries in Wikidata of Collections'.</p>
+      <figure id="F71506081" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/f1dc39b3-91a2-4377-bc97-1ba6e2f15706.png">
+        <figcaption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Figure</span><span class="text">Where to add your Wikidata SPARQL URL link and paste in the full query.</span></figcaption>
+      </figure>
+      <p>These will be: <strong>Collection, Date, and Number of items. </strong></p>
+      <ol id="L56445551">
         <li>
-          <p>The query need to be from a museum.</p>
-        </li>
-        <li>
-          <p>Use the tag <strong>collection</strong> <a href="https://www.wikidata.org/wiki/Property:P195" title="https://www.wikidata.org/wiki/Property:P195">P195</a>.</p>
-        </li>
-        <li>
-          <p>There need to be an image field.</p>
-        </li>
-        <li>
-          <p>There needs to be a title field.</p>
-        </li>
-        <li>
-          <p>And have 3 to 6 more fields.</p>
-        </li>
-        <li>
-          <p>Include the copyright status field.</p>
-        </li>
-        <li>
-          <p>Limit to 9 items.</p>
+          <p>All you need to do is paste in two items into the main cell of the Notebook:</p>
+          <ol id="L84389171">
+            <li>
+              <p>The SPARQL URL - see the green text indicated in Figure 1</p>
+            </li>
+            <li>
+              <p>Paste in the complete body of the SPARQL query - see the orange text in Figure one.</p>
+            </li>
+          </ol>
         </li>
       </ol>
-      <hr>
-      <h2 id="H1711417">Steps in the process</h2>
-      <ul id="L26471441">
-        <li>
-          <p>Make the query - you can make several</p>
-        </li>
-        <li>
-          <p>Store the querie on the GitHub Project</p>
-        </li>
-        <li>
-          <p>Review queries as a group</p>
-        </li>
-      </ul>
-    </div>
-    <section class="fnlist" role="doc-footnotes"></section>
-    <div class="article-part article-title" id="_14_0">Transfering a Wikidata SPARQL query to a Juypter Notebook</div>
-    <div class="article-part article-richtext article-body">
-      <h2 id="H4651342">Example</h2>
-      <p><a href="https://query.wikidata.org/#%23defaultView%3AImageGrid%0ASELECT%20%3Fitem%20%3FitemLabel%20%3Finceptionyear%20%3Fcreator%20%3FcreatorLabel%20%3Fcopyright%20%3FcopyrightLabel%20%3Fimage%0AWHERE%0A%7B%0A%20%20%23%20find%20items%20which%3A%0A%20%20%23%20are%20instances%20of%20%28wdt%3AP31%29%20paintings%20%28wd%3AQ3305213%29%0A%20%20%23%20have%20the%20property%20%28wdt%3AP195%29%20of%20being%20in%20collection%20wd%3AQ812285%20%28Bavarian%20State%20Painting%20Collections%20https%3A%2F%2Fwww.wikidata.org%2Fwiki%2FWikidata%3AWikiProject_sum_of_all_paintings%2FCollection%2FBavarian_State_Painting_Collections%29%0A%20%20%3Fitem%20wdt%3AP31%20wd%3AQ3305213%20.%0A%20%20%3Fitem%20wdt%3AP195%20wd%3AQ812285%20.%0A%20%20%23%20get%20the%20item%27s%20creator%20property%20%28wdt%3AP170%29%0A%20%20%3Fitem%20wdt%3AP170%20%3Fcreator%20.%0A%20%20%23%20get%20the%20item%27s%20image%20property%20%28wdt%3AP18%29%0A%20%20%3Fitem%20wdt%3AP18%20%3Fimage%20.%0A%20%20%23%20get%20the%20item%27s%20copyright%20status%20%28wdt%3AP6216%29%0A%20%20%3Fitem%20wdt%3AP6216%20%3Fcopyright%20.%20%0A%20%20%20%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP571%20%3Finception.%0A%20%20%20%20BIND%28YEAR%28%3Finception%29%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20UNION%0A%20%20%7B%0A%20%20%20%20MINUS%20%7B%20%3Fitem%20wdt%3AP571%20_%3Ab30.%20%7D%0A%20%20%20%20%3Fitem%20wdt%3AP170%20%3Fcreator.%0A%20%20%20%20%3Fcreator%20wdt%3AP569%20%3Fdob%3B%0A%20%20%20%20%20%20wdt%3AP570%20%3Fdod.%0A%20%20%20%20BIND%28%28%28%28YEAR%28%3Fdod%29%29%20-%20%28YEAR%28%3Fdob%29%29%29%20%2F%202%20%29%20%2B%20%28YEAR%28%3Fdob%29%29%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20UNION%0A%20%20%7B%0A%20%20%20%20MINUS%20%7B%20%3Fitem%20wdt%3AP571%20_%3Ab31.%20%7D%0A%20%20%20%20%3Fitem%20wdt%3AP170%20%3Fcreator.%0A%20%20%20%20MINUS%20%7B%20%3Fcreator%20wdt%3AP570%20_%3Ab32.%20%7D%0A%20%20%20%20%3Fcreator%20wdt%3AP569%20%3Fdob.%0A%20%20%20%20BIND%28%28YEAR%28%3Fdob%29%29%20%2B%2050%20%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20%23%20filter%20out%20all%20paintings%20not%20created%20between%20the%20years%201600%20and%201700%0A%20%20FILTER%28%281600%20%20%3C%3D%20%3Finceptionyear%29%20%26%26%20%28%3Finceptionyear%20%3C%201700%20%29%29%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%22.%20%7D%20%7D%0A%23%20limit%20to%20nine%20results%0ALIMIT%209" title="https://query.wikidata.org/#%23defaultView%3AImageGrid%0ASELECT%20%3Fitem%20%3FitemLabel%20%3Finceptionyear%20%3Fcreator%20%3FcreatorLabel%20%3Fcopyright%20%3FcopyrightLabel%20%3Fimage%0AWHERE%0A%7B%0A%20%20%23%20find%20items%20which%3A%0A%20%20%23%20are%20instances%20of%20%28wdt%3AP31%29%20paintings%20%28wd%3AQ3305213%29%0A%20%20%23%20have%20the%20property%20%28wdt%3AP195%29%20of%20being%20in%20collection%20wd%3AQ812285%20%28Bavarian%20State%20Painting%20Collections%20https%3A%2F%2Fwww.wikidata.org%2Fwiki%2FWikidata%3AWikiProject_sum_of_all_paintings%2FCollection%2FBavarian_State_Painting_Collections%29%0A%20%20%3Fitem%20wdt%3AP31%20wd%3AQ3305213%20.%0A%20%20%3Fitem%20wdt%3AP195%20wd%3AQ812285%20.%0A%20%20%23%20get%20the%20item%27s%20creator%20property%20%28wdt%3AP170%29%0A%20%20%3Fitem%20wdt%3AP170%20%3Fcreator%20.%0A%20%20%23%20get%20the%20item%27s%20image%20property%20%28wdt%3AP18%29%0A%20%20%3Fitem%20wdt%3AP18%20%3Fimage%20.%0A%20%20%23%20get%20the%20item%27s%20copyright%20status%20%28wdt%3AP6216%29%0A%20%20%3Fitem%20wdt%3AP6216%20%3Fcopyright%20.%20%0A%20%20%20%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP571%20%3Finception.%0A%20%20%20%20BIND%28YEAR%28%3Finception%29%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20UNION%0A%20%20%7B%0A%20%20%20%20MINUS%20%7B%20%3Fitem%20wdt%3AP571%20_%3Ab30.%20%7D%0A%20%20%20%20%3Fitem%20wdt%3AP170%20%3Fcreator.%0A%20%20%20%20%3Fcreator%20wdt%3AP569%20%3Fdob%3B%0A%20%20%20%20%20%20wdt%3AP570%20%3Fdod.%0A%20%20%20%20BIND%28%28%28%28YEAR%28%3Fdod%29%29%20-%20%28YEAR%28%3Fdob%29%29%29%20%2F%202%20%29%20%2B%20%28YEAR%28%3Fdob%29%29%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20UNION%0A%20%20%7B%0A%20%20%20%20MINUS%20%7B%20%3Fitem%20wdt%3AP571%20_%3Ab31.%20%7D%0A%20%20%20%20%3Fitem%20wdt%3AP170%20%3Fcreator.%0A%20%20%20%20MINUS%20%7B%20%3Fcreator%20wdt%3AP570%20_%3Ab32.%20%7D%0A%20%20%20%20%3Fcreator%20wdt%3AP569%20%3Fdob.%0A%20%20%20%20BIND%28%28YEAR%28%3Fdob%29%29%20%2B%2050%20%20AS%20%3Finceptionyear%29%0A%20%20%7D%0A%20%20%23%20filter%20out%20all%20paintings%20not%20created%20between%20the%20years%201600%20and%201700%0A%20%20FILTER%28%281600%20%20%3C%3D%20%3Finceptionyear%29%20%26%26%20%28%3Finceptionyear%20%3C%201700%20%29%29%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%22.%20%7D%20%7D%0A%23%20limit%20to%20nine%20results%0ALIMIT%209">Query</a> - 17C Bavarian Painting Collection</p>
-      <p><a href="https://github.com/NFDI4Culture/catalogue-003/blob/main/paintings.ipynb" title="https://github.com/NFDI4Culture/catalogue-003/blob/main/paintings.ipynb">Jupyter Notebook</a> - <a href="https://mybinder.org/v2/gh/NFDI4Culture/catalogue-003/HEAD" title="https://mybinder.org/v2/gh/NFDI4Culture/catalogue-003/HEAD">Binder</a></p>
+      <p>Then run the Notebook and save the Notebook file when you are done.</p>
+      <p>To render the output in Quarto, run the Quarto commands - preview and/or render.</p>
+      <p>When your finished you can upload the results to your GitHub repository.</p>
+      <h3 id="H3164141">Query 2: Make your own collection query</h3>
+      <p>TBC</p>
+      <p></p>
       <p></p>
     </div>
     <section class="fnlist" role="doc-footnotes"></section>
