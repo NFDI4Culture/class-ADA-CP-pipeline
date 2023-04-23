@@ -1152,11 +1152,11 @@
         </li>
       </ul>
       <h3 id="H9669908">Query 1: A painting collection</h3>
-      <p>For this collection you simply edit the existing Notebook for the painting collection <strong>'paintings.ipynb'</strong> - transfering across the new values that you have already created. See the section 'Making SPARQL Queries in Wikidata of Collections'.</p>
+      <p>For this collection you simply edit the existing Notebook for the painting collection <strong>'paintings.ipynb'</strong> rename as <strong>paintings_1xx.ipynb</strong> (with xx as your initails) - transfering across the new values that you have already created. See the section 'Making SPARQL Queries in Wikidata of Collections'.</p>
       <figure id="F71506081" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/f1dc39b3-91a2-4377-bc97-1ba6e2f15706.png">
         <figcaption><span class="label-counter" data-book-counter="3" data-chapter-counter="1">Figure</span><span class="text">Where to add your Wikidata SPARQL URL link and paste in the full query.</span></figcaption>
       </figure>
-      <p>These are the values being changed: <strong>Collection, Date, and Number of items. </strong></p>
+      <p>These are the values being changed: <strong>Collection, Date range, and Number of items. </strong></p>
       <ol id="L56445551">
         <li>
           <p>All you need to do is paste in two items into the main cell of the Notebook:</p>
@@ -1173,13 +1173,16 @@
           </ol>
         </li>
       </ol>
-      <p>Then run the Notebook and save the Notebook file when you are done.</p>
+      <p>Then run the Notebook and save the Notebook file when you are done and any other files edited.</p>
+      <p>Note: Change the notebook name in the _quarto.yml TOC so that your new file is included in the publication. Change paintings.ipynb to paintings_1xx.ipynb.</p>
+      <p>Note: Ensure requirements.txt has been added and run. </p>
       <p>To render the output in Quarto, run the Quarto commands in your terminal - 'quarto preview' and/or 'quarto render'.</p>
       <p>When your finished you can upload the results to your GitHub repository.</p>
       <h3 id="H3164141">Query 2: Your custom collection query</h3>
       <p>Because SPARQL queries are varied and complex the process of moving the query into a Jupyter Notebook is not simple and involved knowledge of SPARQL and Python. The challenge is that the SPARQL metadata output has to be parsed by Python for presentation in the publication and to do this custom code needs to be written.</p>
-      <p>To help with this obstacle a support service is in place to consult and add the Python code to your Notebooks.</p>
+      <p><strong>To help with this obstacle a support service is in place to consult and add the Python code to your Notebooks.</strong></p>
       <p>When you have completed the steps below and have a Notebook ready raise a ticket in the GitHub Project and assign to support and we will review the Notebook.</p>
+      <p>See all class members collection notebooks here. This is a test zone where support will edit copies of your notebooks to show how to make them woirk: <a href="https://github.com/NFDI4Culture/sandbox-notebook-rendering" title="https://github.com/NFDI4Culture/sandbox-notebook-rendering">https://github.com/NFDI4Culture/sandbox-notebook-rendering</a></p>
       <h4 id="H7994039">Steps</h4>
       <p>This will prepare the Notebook to output the SPARQL results only. The additional rendering will need to be added by support.</p>
       <p>Create a new Notebook in your Quarto publication 'collection-name.ipynb'.</p>
@@ -1200,9 +1203,6 @@
       <p>Add your Notebook to the Quarto TOC by adding the file name of your collection to the TOC in the file <strong>_quarto.yml</strong>, under the chapter header on line 12. Save and render the quart publication to see the results.</p>
       <p>To complete this part raise a ticket in the GitHub project assigning to support. </p>
       <p>This concludes this part of the process.</p>
-      <p></p>
-      <p></p>
-      <p></p>
       <p></p>
       <p></p>
     </div>
